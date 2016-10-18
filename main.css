@@ -4,3 +4,10 @@ body {
     color:white;
 }
 
+div.header {
+    margin: auto;
+    background-color: rgb(0,128,128);
+    max-width: 300px;
+    text-align: center;
+    padding: 40px 0;
+}
