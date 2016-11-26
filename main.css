@@ -1,13 +1,29 @@
 body {
-    background-color: rgb(25,25,25);
-    font-family:Verdana;
-    color:white;
+	background-color: rgb(25,25,25);
+	font-family:ariel;
+	color:white;
+	font-size: 100%;
 }
 
 div.header {
-    margin: auto;
-    background-color: rgb(0,128,128);
-    max-width: 300px;
-    text-align: center;
-    padding: 40px 0;
+	margin: auto;
+	background-color: rgb(0,128,128);
+	/* max-width: 300px; */
+	text-align: center;
+	padding: 40px 0;
+	font-size:4.0em;
+}
+
+div.function {
+	/* Position */
+	display: inline-block;
+	/* Shape*/
+	width: 49%;
+	padding: 10%;
+	border: 10px solid yellow;
+	/* Color */
+	/* border: 10px solid brown; */
+	/* font */
+	text-align: center;
+	font-size:4.0em;
 }
