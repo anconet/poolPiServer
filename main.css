@@ -16,6 +16,7 @@ div.header {
 
 div.function {
 	/* Position */
+	background-color: darkgrey;
 	display: inline-block;
 	/* Shape*/
 	width: 49.5%;
@@ -26,6 +27,7 @@ div.function {
 
 div.info {
 	/* Position */
+	background-color: darkgrey;
 	display: inline-block;
 	/* Shape*/
 	width: 49.5%;

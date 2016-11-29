@@ -9,6 +9,13 @@
 
     <head>
         <title>Pool Pi</title>
+
+	<script> 
+	function button_press(buttonID){
+		buttonID.style.background = "green";
+	}
+	</script>
+
     </head>
 
     <body>
@@ -16,7 +23,7 @@
             <p> some content</p>
         </div>
 
-         <div class="function">
+         <div class="function" onclick="button_press(this)">
             <p>Pool Mode</p>
         </div>
 
