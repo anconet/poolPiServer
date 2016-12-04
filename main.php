@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+	<link rel="stylesheet" type="text/css" href="main.css">
+		<title>Pool Pi</title>
+
+<script> 
+function button_press(buttonID){
+	buttonID.style.background = "green";
+}
+</script>
+
+	</head>
+
+	<body>
+Gracie
+<?php 
+echo "Hello WOrld";
+?>
+		<div class="header">
+			<p> some content</p>
+		</div>
+
+		<div class="function" onclick="button_press(this)">
+			<p>Pool Mode</p>
+		</div>
+
+		<div class="function">
+			<p>Spa Mode</p>
+		</div>
+
+		<div class="function">
+			<p>Pool Lights</p>
+		</div>
+
+		<div class="function">
+			<p>Spa Light</p>
+		</div>
+
+		<div class="info">
+			<p>Air Temp</p>
+		</div>
+
+		<div class="info">
+			<p>Water Temp</p>
+		</div>
+
+		<div class="footer">
+			<p>By: Team Anconetani</p>
+		</div>
+	</body>
+
+</html>
