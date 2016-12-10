@@ -13,12 +13,15 @@ function button_press(buttonID){
 }
 </script>
 
+<?php 
+echo "Hello World";
+$poolState=simplexml_load_file("poolState.xml") or die ("Error: Can't open pool state");
+echo $poolState->poolMode;
+
+?>
 	</head>
 
 	<body>
-<?php 
-echo "Hello WOrld";
-?>
 		<div class="header">
 			<p> some content</p>
 		</div>
