@@ -27,7 +27,7 @@ echo "Hello WOrld";
 			<p>Pool Mode</p>
 		</div>
 
-		<div class="function">
+		<div class="function right">
 			<p>Spa Mode</p>
 		</div>
 
@@ -35,7 +35,7 @@ echo "Hello WOrld";
 			<p>Pool Lights</p>
 		</div>
 
-		<div class="function">
+		<div class="function right">
 			<p>Spa Light</p>
 		</div>
 
@@ -43,7 +43,7 @@ echo "Hello WOrld";
 			<p>Air Temp</p>
 		</div>
 
-		<div class="info">
+		<div class="info right">
 			<p>Water Temp</p>
 		</div>
 

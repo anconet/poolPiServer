@@ -25,6 +25,10 @@ div.function {
 	font-size:4.0em;
 }
 
+div.right {
+	float: right;
+}
+
 div.info {
 	/* Position */
 	background-color: darkgrey;
