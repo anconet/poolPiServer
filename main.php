@@ -16,7 +16,6 @@ function button_press(buttonID){
 	</head>
 
 	<body>
-Gracie
 <?php 
 echo "Hello WOrld";
 ?>
