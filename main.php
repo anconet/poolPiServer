@@ -13,12 +13,6 @@ function button_press(buttonID){
 }
 </script>
 
-<?php 
-echo "Hello World";
-$poolState=simplexml_load_file("poolState.xml") or die ("Error: Can't open pool state");
-echo $poolState->poolMode;
-
-?>
 	</head>
 
 	<body>
@@ -26,7 +20,7 @@ echo $poolState->poolMode;
 			<p> some content</p>
 		</div>
 
-		<div class="function" onclick="button_press(this)">
+		<div id="poolModeButton" class="function" onclick="button_press(this)">
 			<p>Pool Mode</p>
 		</div>
 
@@ -54,5 +48,16 @@ echo $poolState->poolMode;
 			<p>By: Team Anconetani</p>
 		</div>
 	</body>
+
+<?php 
+echo "Hello World";
+$poolState=simplexml_load_file("poolState.xml") or die ("Error: Can't open pool state");
+
+if ($poolState->poolMode == "on") {
+
+	echo "Pool is On";
+	echo '<script> button_press(document.getElementById("poolModeButton"))</script>';
+}	
+?>
 
 </html>
