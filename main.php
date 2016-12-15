@@ -4,14 +4,20 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 	<head>
-	<link rel="stylesheet" type="text/css" href="main.css">
-		<title>Pool Pi</title>
 
-<script> 
-function button_press(buttonID){
-	buttonID.style.background = "green";
-}
-</script>
+		<!-- Reference to CSS Style Sheet -->
+		<link rel="stylesheet" type="text/css" href="main.css">
+	
+		<!-- JQuery Library from Google -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+		<script>	 
+			function button_press(buttonID){
+				buttonID.style.background = "green";
+			}
+		</script>
+
+		<title>Pool Pi</title>
 
 	</head>
 
