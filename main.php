@@ -17,6 +17,7 @@
 			}
 		</script>
 
+		<script>$.post("buttons.php",function(data){alert ("Data Loaded"+data)});document.write("Did I get here?")</script>
 		<title>Pool Pi</title>
 
 	</head>
@@ -56,14 +57,14 @@
 	</body>
 
 <?php 
-echo "Hello World";
+//echo "Hello World";
 $poolState=simplexml_load_file("poolState.xml") or die ("Error: Can't open pool state");
 
 if ($poolState->poolMode == "on") {
 
-	echo "Pool is On";
+	//echo "Pool is On";
 	echo '<script> button_press(document.getElementById("poolModeButton"))</script>';
-}	
+}
 ?>
 
 </html>
