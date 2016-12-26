@@ -1,6 +1,7 @@
 <?php
 
 //Just a comment
-echo " button.php responds: What's up yo?!";
+//echo " button.php: Received: $_POST["buttonPressed"]";
+echo " button.php: Received: ";
 
 ?>

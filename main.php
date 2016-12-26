@@ -7,17 +7,22 @@
 
 		<!-- Reference to CSS Style Sheet -->
 		<link rel="stylesheet" type="text/css" href="main.css">
-	
+
 		<!-- JQuery Library from Google -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
-		<script>	 
+		<script>
 			function button_press(buttonID){
 				buttonID.style.background = "green";
 			}
 		</script>
 
-		<script>$.post("buttons.php",function(data){alert ("Data Loaded"+data)});document.write("Did I get here?")</script>
+		<script>
+		//$.post("buttons.php",{"buttonPressed":"poolMode"},function(data){alert ("Data Loaded"+data)});
+		$.post("buttons.php",function(data){alert ("Data Loaded"+data)});
+		//document.write("Did I get here?");
+		</script>
+
 		<title>Pool Pi</title>
 
 	</head>
@@ -56,7 +61,7 @@
 		</div>
 	</body>
 
-<?php 
+<?php
 //echo "Hello World";
 $poolState=simplexml_load_file("poolState.xml") or die ("Error: Can't open pool state");
 
