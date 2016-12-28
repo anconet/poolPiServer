@@ -18,8 +18,10 @@
 		</script>
 
 		<script>
-		//$.post("buttons.php",{"buttonPressed":"poolMode"},function(data){alert ("Data Loaded"+data)});
-		$.post("buttons.php",function(data){alert ("Data Loaded"+data)});
+		//$.post("buttons.php",{buttonPressed:"poolMode"});
+		$.post("buttons.php",{buttonPressed:"poolMode"},function(data){alert ("Data Loaded"+data)},"json");
+		//$.post("buttons.php","{buttonPressed:"poolMode"}",function(data){alert ("Data Loaded"+data)});
+		//$.post("buttons.php",function(data){alert ("Data Loaded"+data)});
 		//document.write("Did I get here?");
 		</script>
 
