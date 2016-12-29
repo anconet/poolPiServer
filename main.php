@@ -18,7 +18,12 @@
 		</script>
 
 		<script>
-		$.post("buttons.php",{"buttonPressed":"poolMode"},function(data){alert ("Data Loaded"+data)},"json");
+		//var objEvent = {"eventType":"buttonPress","eventData":"poolMode"};
+		var objEvent = {};
+		objEvent.eventType = "buttonPress";
+		objEvent.eventData = "poolMode";
+		$.post("buttons.php",objEvent,function(data){alert ("Data Loaded"+data)},"json");
+		//$.post("buttons.php",{"buttonPressed":"poolMode"},function(data){alert ("Data Loaded"+data)},"json");
 		</script>
 
 		<title>Pool Pi</title>
