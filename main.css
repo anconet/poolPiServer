@@ -1,11 +1,16 @@
+html{
+	box-sizing: border-box;
+}
+
 body {
-	background-color: rgb(25,25,25);
-	font-family: verdana;
+	background-color: rgba(25,25,25,1.00);
+	font-family: League Gothic;
 	color:white;
 	font-size: 100%;
 }
 
-div.header {
+
+.intro {
 	margin: auto;
 	background-color: rgb(44, 123, 169);
 	/* max-width: 300px; */
@@ -14,35 +19,61 @@ div.header {
 	font-size:4.0em;
 }
 
-div.function {
+.function {
 	/* Position */
 	background-color: darkgrey;
 	display: inline-block;
 	/* Shape*/
-	width: 50%;
+	width: 100%;
 	/*font*/
 	text-align: center;
 	font-size:4.0em;
+	
 }
 
-div.right {
+.pool-mode{
+	height: 200px;
+}
+
+.spa-mode{
+	height: 100px;
+	background-color: #295577;
+}
+
+right {
 	float: right;
 }
 
-div.info {
+.info {
 	/* Position */
-	background-color: darkgrey;
+	background-color: #295577;
 	display: inline-block;
+	position: static;
 	/* Shape*/
-	width: 50%;
+	width: 100%;
 	/*font*/
 	text-align: center;
 	font-size:4.0em;
+	text-transform: uppercase;
 }
 
-div.footer {
+.info .left{
+	width: 45%;
+	float: left;
+	text-align: left;
+	padding-left: 5%
+}
+
+.info .right {
+	width: 45%;
+	float: right;
+	text-align: left;
+	padding-left: 5%;
+}
+
+.footer {
 	margin: auto;
-	background-color: rgb(121, 91, 60);
+	background-color: #9E8753;
 	/* max-width: 300px; */
 	text-align: center;
 	padding: 40px 0;

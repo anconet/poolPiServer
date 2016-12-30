@@ -3,7 +3,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 
-	<head>
+<head>
 
 		<!-- Reference to CSS Style Sheet -->
 		<link rel="stylesheet" type="text/css" href="main.css">
@@ -25,50 +25,58 @@
 
 		<title>Pool Pi</title>
 
-	</head>
+</head>
 
-	<body>
-		<div class="header">
-			<p> some content</p>
-		</div>
+<body>
+	<main>
+		<section class="intro">
+			<div class="header">
+				<p>POOL PI</p>
+			</div>
+		</section>
 
-		<div id="poolModeButton" class="function" onclick="button_press(this)">
-			<p>Pool Mode</p>
-		</div>
+		<section class="function">
+			<div id="poolModeButton" class="pool-mode" onclick="button_press(this)">
+				<p>Pool Mode</p>
+			</div>
 
-		<div class="function right">
-			<p>Spa Mode</p>
-		</div>
+			<div class="spa-mode">
+				<p>Spa Mode</p>
+			</div>
 
-		<div class="function">
-			<p>Pool Lights</p>
-		</div>
+			<div class="pool-lights">
+				<p>Pool Lights</p>
+			</div>
 
-		<div class="function right">
-			<p>Spa Light</p>
-		</div>
+			<div class="spa-lights">
+				<p>Spa Light</p>
+			</div>
+		</section>
 
-		<div class="info">
-			<p>Air Temp</p>
-		</div>
+		<section class="info">
+			<div class="left">
+				<p>Air Temp:</p>
+			</div>
 
-		<div class="info right">
-			<p>Water Temp</p>
-		</div>
+			<div class="right">
+				<p>Water Temp:</p>
+			</div>
+		</section>
 
-		<div class="footer">
+		<section class="footer">
 			<p>By: Team Anconetani</p>
-		</div>
-	</body>
+		</section>
+	</main>
+</body>
 
 <?php
-//echo "Hello World";
+echo "Hello World";
 $poolState=simplexml_load_file("poolState.xml") or die ("Error: Can't open pool state");
 
 if ($poolState->poolMode == "on") {
 
 	//echo "Pool is On";
-	echo '<script> button_press(document.getElementById("poolModeButton"))</script>';
+	//echo '<script> button_press(document.getElementById("poolModeButton"))</script>';
 }
 ?>
 
