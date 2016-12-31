@@ -66,7 +66,8 @@
 
 <?php
 //echo "Hello World";
-$poolState=simplexml_load_file("poolState.xml") or die ("Error: Can't open pool state");
+//$poolState=simplexml_load_file("poolState.xml") or die ("Error: Can't open pool state");
+$poolState = json_decode(file_get_contents("poolState.json"),false);
 
 if ($poolState->poolMode == "on") {
 

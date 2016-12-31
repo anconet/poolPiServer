@@ -1,6 +1,6 @@
 {
-	"poolMode":"on",
+	"poolMode":"off",
 	"spaMode":"off",
 	"poolLight":"off",
-	"spaLight":"off",
+	"spaLight":"off"
 }
