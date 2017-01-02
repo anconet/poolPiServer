@@ -3,34 +3,61 @@
 // So JQuery is essentially passing a hash to the server. If you really wanted to receive JSON
 // then you have to set JQuery to use application/json. I think it would be $.ajaxsetup(contenType:"application/json")
 
-//Just a comment
-//$objEvent->type = $_POST[eventType];
-//$objEvent->data = $_POST[eventData];
-
+/**
+ * Event
+ */
 class Event {
 
   public $type;
-  public $data;
+  public $subject;
+
+  function __construct($post) {
+
+    $this->type = $post["type"];
+    $this->subject = $post["subject"];
+    //$this->type = "buttonPress";
+    //$this->subject = "poolModeButton";
+  }
 }
 
-$objEvent = new Event();
+/**
+ * Event Reponse
+ */
+class EventResponse {
 
-$objEvent->type = "buttonPress";
-$objEvent->data = "poolModeButton";
+  public $type;
+  public $subject;
+  public $response;
 
+  function __construct($event,$response) {
+    $this->type = $event->type;
+    $this->subject = $event->subject;
+    $this->response = $response;
+  }
+}
+
+$objEvent = new Event($_POST);
 
 if ($objEvent->type == "buttonPress") {
 
   $poolState = json_decode(file_get_contents("poolState.json"),false);
 
-  if ($objEvent->data == "poolModeButton") {
-    if ($poolState->poolMode == "off") {$poolState->poolMode = "on";}
-    else {$poolState->poolMode = "off";}
+  if ($objEvent->subject == "poolModeButton") {
+    if ($poolState->poolMode == "off") {
+      $poolState->poolMode = "on";
+    }
+    else {
+      $poolState->poolMode = "off";
+    }
+    file_put_contents("poolState.json",json_encode($poolState));
+    echo json_encode(new EventResponse($objEvent,$poolState->poolMode));
   }
-
-  file_put_contents("poolState.json",json_encode($poolState));
+  else {
+    echo json_encode(new EventResponse($objEvent,"invalid"));
+  }
 }
-//echo " button.php: Received: $_POST[eventType], $_POST[eventData]";
-//echo " button.php: Received: ";
+else {
+  echo json_encode(new EventResponse($objEvent,"invalid"));
+}
 
 ?>

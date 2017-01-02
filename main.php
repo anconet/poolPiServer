@@ -14,8 +14,8 @@
 		<script>
 			function button_press(buttonID){
 				var objEvent = {};
-				objEvent.eventType = "buttonPress";
-				objEvent.eventData = "poolModeButton";
+				objEvent.type = "buttonPress";
+				objEvent.subject = "poolModeButton";
 				$.post("buttons.php",objEvent,function(data){alert ("Data Loaded"+data)},"json");
 
 				<!--buttonID.style.background = "green";-->
@@ -24,10 +24,10 @@
 
 		<script>
 		//var objEvent = {"eventType":"buttonPress","eventData":"poolMode"};
-		var objEvent = {};
-		objEvent.eventType = "buttonPress";
-		objEvent.eventData = "poolMode";
-		$.post("buttons.php",objEvent,function(data){alert ("Data Loaded"+data)},"json");
+		//var objEvent = {};
+		//objEvent.eventType = "buttonPress";
+		//objEvent.eventData = "poolMode";
+		//$.post("buttons.php",objEvent,function(data){alert ("Data Loaded"+data)},"json");
 		//$.post("buttons.php",{"buttonPressed":"poolMode"},function(data){alert ("Data Loaded"+data)},"json");
 		</script>
 
@@ -72,13 +72,13 @@
 <?php
 //echo "Hello World";
 //$poolState=simplexml_load_file("poolState.xml") or die ("Error: Can't open pool state");
-$poolState = json_decode(file_get_contents("poolState.json"),false);
+//$poolState = json_decode(file_get_contents("poolState.json"),false);
 
-if ($poolState->poolMode == "on") {
+//if ($poolState->poolMode == "on") {
 
 	//echo "Pool is On";
-	echo '<script> button_press(document.getElementById("poolModeButton"))</script>';
-}
+	//echo '<script> button_press(document.getElementById("poolModeButton"))</script>';
+//}
 ?>
 
 </html>
