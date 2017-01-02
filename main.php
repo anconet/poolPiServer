@@ -13,7 +13,12 @@
 
 		<script>
 			function button_press(buttonID){
-				buttonID.style.background = "green";
+				var objEvent = {};
+				objEvent.eventType = "buttonPress";
+				objEvent.eventData = "poolModeButton";
+				$.post("buttons.php",objEvent,function(data){alert ("Data Loaded"+data)},"json");
+
+				<!--buttonID.style.background = "green";-->
 			}
 		</script>
 
