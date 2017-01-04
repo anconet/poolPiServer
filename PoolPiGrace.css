@@ -32,6 +32,7 @@ h2 {
 	font-family: "Regina Black";
 	color: #E7D9B8;
 	font-size: 2em;
+	display: inline;
 }
 
 nav {
@@ -84,25 +85,44 @@ nav ul li a {
 
 h1 {
 	text-align: center;
-	padding-top: 150px;
 	font-family: "Regina Black";
 	font-size: 6em;
 	text-transform: uppercase;
 }
 
 .mode {
-	height: 500px;
+	display: flex;
+	align-items: center;
+	height: 300px;
 	background-color: #e7d9b8;
 	align-content: center;
 }
 
-.mode-buttons {
+.button-div {
 	width: 35%;
+	display: inline-block;
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	height: 60%;
+}
+
+button {	
+	background-color: #295577;
+	border: none;
+	height: 180px;
+	width: 180px;
+	border-radius: 50%;
+	font-family: "League Gothic", "Regina Black";
+	font-size: 5em;
+	color: #e7d9b8;
+	
 }
 
 .mode h1 {
 	color: #78acca;
 	width: 30%;
+	display: inline-block;
 }
 
 .lights {
