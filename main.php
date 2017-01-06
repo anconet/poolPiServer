@@ -11,20 +11,6 @@
 		<!-- JQuery Library from Google -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
-		<script>
-			function buttonPress(buttonID){
-				var objEvent = {};
-				objEvent.type = "buttonPress";
-				objEvent.subject = "poolModeButton";
-				$.post( "buttons.php", objEvent, function(data){processResponse(data,buttonID)}, "json");
-			}
-
-			function processResponse(objEventResponse,buttonID) {
-				if (objEventResponse.response == "off") { buttonID.style.background = "darkgrey";}
-				else if (objEventResponse.reponse == "on") { buttonID.style.background = "green";}
-				else { }// Do Nothing
-			}
-		</script>
 
 		<script>
 		//var objEvent = {"eventType":"buttonPress","eventData":"poolMode"};
@@ -44,7 +30,7 @@
 			<p> some content</p>
 		</div>
 
-		<div id="poolModeButton" class="function" onclick="buttonPress(this)">
+		<div id="poolModeButton" class="function">
 			<p>Pool Mode</p>
 		</div>
 
@@ -72,6 +58,22 @@
 			<p>By: Team Anconetani</p>
 		</div>
 	</body>
+
+	<script>
+
+		$("#poolModeButton").click(function(){
+			var objEvent = {};
+			objEvent.type = "buttonPress";
+			objEvent.subject = "poolModeButton";
+			$.post( "buttons.php", objEvent, function(data){processResponse(data)}, "json");
+		});
+
+		function processResponse(objEventResponse) {
+			if (objEventResponse.response == "off") { $("#poolModeButton").css({"background":"darkgrey"});}
+			else if (objEventResponse.response == "on") { $("#poolModeButton").css({"background":"green"});}
+			else { alert("3:")}// Do Nothing
+		}
+	</script>
 
 <?php
 //echo "Hello World";
