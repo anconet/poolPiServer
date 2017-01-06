@@ -12,13 +12,17 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
 		<script>
-			function button_press(buttonID){
+			function buttonPress(buttonID){
 				var objEvent = {};
 				objEvent.type = "buttonPress";
 				objEvent.subject = "poolModeButton";
-				$.post("buttons.php",objEvent,function(data){alert ("Data Loaded"+data)},"json");
+				$.post( "buttons.php", objEvent, function(data){processResponse(data,buttonID)}, "json");
+			}
 
-				<!--buttonID.style.background = "green";-->
+			function processResponse(objEventResponse,buttonID) {
+				if (objEventResponse.response == "off") { buttonID.style.background = "darkgrey";}
+				else if (objEventResponse.reponse == "on") { buttonID.style.background = "green";}
+				else { }// Do Nothing
 			}
 		</script>
 
@@ -40,7 +44,7 @@
 			<p> some content</p>
 		</div>
 
-		<div id="poolModeButton" class="function" onclick="button_press(this)">
+		<div id="poolModeButton" class="function" onclick="buttonPress(this)">
 			<p>Pool Mode</p>
 		</div>
 
@@ -77,7 +81,7 @@
 //if ($poolState->poolMode == "on") {
 
 	//echo "Pool is On";
-	//echo '<script> button_press(document.getElementById("poolModeButton"))</script>';
+	//echo '<script> buttonPress(document.getElementById("poolModeButton"))</script>';
 //}
 ?>
 
