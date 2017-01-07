@@ -16,7 +16,7 @@ div.header {
 
 div.function {
 	/* Position */
-	background-color: darkgrey;
+	/*background-color: darkgry;*/
 	display: inline-block;
 	/* Shape*/
 	width: 50%;
@@ -24,6 +24,8 @@ div.function {
 	text-align: center;
 	font-size:4.0em;
 }
+.functionOff {background-color: darkgrey;}
+.functionOn {background-color: green;}
 
 div.right {
 	float: right;

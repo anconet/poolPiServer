@@ -11,16 +11,6 @@
 		<!-- JQuery Library from Google -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
-
-		<script>
-		//var objEvent = {"eventType":"buttonPress","eventData":"poolMode"};
-		//var objEvent = {};
-		//objEvent.eventType = "buttonPress";
-		//objEvent.eventData = "poolMode";
-		//$.post("buttons.php",objEvent,function(data){alert ("Data Loaded"+data)},"json");
-		//$.post("buttons.php",{"buttonPressed":"poolMode"},function(data){alert ("Data Loaded"+data)},"json");
-		</script>
-
 		<title>Pool Pi</title>
 
 	</head>
@@ -60,31 +50,19 @@
 	</body>
 
 	<script>
-
 		$("#poolModeButton").click(function(){
 			var objEvent = {};
 			objEvent.type = "buttonPress";
 			objEvent.subject = "poolModeButton";
-			$.post( "buttons.php", objEvent, function(data){processResponse(data)}, "json");
+			var objElementID = this;
+			$.post( "buttons.php", objEvent, function(data){processResponse(data,objElementID)}, "json");
 		});
 
-		function processResponse(objEventResponse) {
-			if (objEventResponse.response == "off") { $("#poolModeButton").css({"background":"darkgrey"});}
-			else if (objEventResponse.response == "on") { $("#poolModeButton").css({"background":"green"});}
-			else { alert("3:")}// Do Nothing
+		function processResponse(objEventResponse,objElementID) {
+			if (objEventResponse.response == "off") { $(objElementID).removeClass("functionOn").addClass("functionOff");}
+			else if (objEventResponse.response == "on") { $(objElementID).removeClass("functionOff").addClass("functionOn");}
+			else { alert("Error: Server Response: " + objEventResponse.response)}
 		}
 	</script>
-
-<?php
-//echo "Hello World";
-//$poolState=simplexml_load_file("poolState.xml") or die ("Error: Can't open pool state");
-//$poolState = json_decode(file_get_contents("poolState.json"),false);
-
-//if ($poolState->poolMode == "on") {
-
-	//echo "Pool is On";
-	//echo '<script> buttonPress(document.getElementById("poolModeButton"))</script>';
-//}
-?>
 
 </html>
