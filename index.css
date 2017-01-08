@@ -108,7 +108,6 @@ h1 {
 }
 
 button {	
-	background-color: #295577;
 	border: none;
 	height: 180px;
 	width: 180px;
@@ -120,11 +119,21 @@ button {
 }
 
 .mode h1 {
-	color: #78acca;
+	color: #78ACCA;
 	width: 30%;
 	display: inline-block;
 }
 
-.lights {
-	
+.buttonOff {
+	border: solid;
+	border-width: 7px;
+	border-color: #295577;
+	background-color: #e7d9b8;
+	color: #295577;
 }
+
+.buttonOn {
+	background-color: #295577;
+}
+
+
