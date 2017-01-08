@@ -55,7 +55,7 @@
 			objEvent.type = "buttonPress";
 			objEvent.subject = "poolModeButton";
 			var objElementID = this;
-			$.post( "buttons.php", objEvent, function(data){processResponse(data,objElementID)}, "json");
+			$.post( "buttonPress.php", objEvent, function(data){processResponse(data,objElementID)}, "json");
 		});
 
 		function processResponse(objEventResponse,objElementID) {
