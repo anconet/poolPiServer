@@ -6,8 +6,8 @@
 // application/json. I think it would be
 // $.ajaxsetup(contenType:"application/json")
 
-include 'Event.php';
-include 'EventResponse.php';
+include 'classes/Event.php';
+include 'classes/EventResponse.php';
 
 $objEvent = new Event($_POST);
 //$objEvent = new Event(array("type"=>"buttonPress","subject"=>"poolModeButton"));

@@ -1,0 +1,142 @@
+@charset "utf-8";
+/* CSS Document */
+
+@font-face {
+	font-family: "Regina Black";
+	src: url("Regina_Black/ReginaBlack-Solid.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "League Gothic";
+	src: url("Regina_Black/LeagueGothic-Regular.otf") format("opentype");
+}
+
+html,
+html * {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	font-family: "League Gothic";
+}
+
+header {
+	position: fixed;
+	padding: 2em;
+	background: #295577;
+	width:100%;
+	top: inherit;
+	z-index: 1000;
+	height: 100px;
+}
+
+h2 {
+	width: 20%;
+	font-family: "Regina Black";
+	color: #E7D9B8;
+	font-size: 2em;
+	display: inline;
+}
+
+nav {
+	position: relative;
+	float: right;
+	z-index: 400;
+	top: 0;
+	left: 0;
+	display: inline-block;
+	padding: 0em 1em 0em 0em;
+	width: 75%;
+
+}
+
+nav ul {
+	list-style-type: none;
+	margin: 0;
+	text-align: right;
+}
+
+nav ul li {
+	display: inline-block;
+	margin-left: 1.5em;
+}
+
+nav ul li a {
+	font-size: 2em;
+	padding-bottom: .5em;
+	text-decoration: none;
+	letter-spacing: .15em;
+	text-transform: uppercase;
+	color: #E7D9B8;
+}
+
+.intro {
+	height: 500px;
+	background-color: #78acca;
+	text-align: center;
+}
+
+.intro-content {
+	padding: 200px 200px 100px;
+	text-transform: uppercase;
+	font-size: 3em;
+	color: #295577;
+	letter-spacing: .5em;
+	line-height: 1.5;
+
+}
+
+h1 {
+	text-align: center;
+	font-family: "Regina Black";
+	font-size: 6em;
+	text-transform: uppercase;
+}
+
+.mode {
+	display: flex;
+	align-items: center;
+	height: 300px;
+	background-color: #e7d9b8;
+	align-content: center;
+}
+
+.button-div {
+	width: 35%;
+	display: inline-block;
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	height: 60%;
+}
+
+button {
+	border: none;
+	height: 180px;
+	width: 180px;
+	border-radius: 50%;
+	font-family: "League Gothic", "Regina Black";
+	font-size: 5em;
+	color: #e7d9b8;
+
+}
+
+.mode h1 {
+	color: #78ACCA;
+	width: 30%;
+	display: inline-block;
+}
+
+.buttonOff {
+	border: solid;
+	border-width: 7px;
+	border-color: #295577;
+	background-color: #e7d9b8;
+	color: #295577;
+}
+
+.buttonOn {
+	background-color: #295577;
+}
