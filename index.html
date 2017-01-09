@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <title>PoolPiGrace</title>
-<link href="PoolPiGrace.css" rel="stylesheet" type="text/css">
+<link href="index.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
@@ -13,9 +13,9 @@
 		</h2>
 		<nav>
 			<ul>
-				<li><a id= "a1">MODE</a></li>
-				<li><a id= "a2">LIGHTS</a></li>
-				<li><a id= "a3">TEMP</a></li>
+				<li><a name="mode-anchor">MODE</a></li>
+				<li><a name="lights-anchor">LIGHTS</a></li>
+				<li><a name="info-anchor">TEMP</a></li>
 			</ul>
 		</nav>
 	</header>
@@ -27,17 +27,35 @@
 	</section>
 	
 	<section class="mode" id="mode-anchor">
-	  <div class="button-div">
-	  	<button class="mode-buttons buttonOn">
-	  		SPA
-	  	</button>
-	  </div>
-	  <h1> mode </h1>
-	  <div class="button-div">
-	  	<button class="mode-buttons buttonOff">
-	  		MODE
-	  	</button>
-	  </div>
+		<div class="button-div">
+	  		<button class="mode-buttons">
+	  			SPA
+	  		</button>
+		</div>
+		<h1> mode </h1>
+		<div class="button-div">
+	  		<button class="mode-buttons">
+	  			POOL
+	  		</button>
+		</div>
+	</section>
+	
+	<section class="temp-control">
+		<p>IN PROGRESS...</p>
+	</section>
+	
+	<section class="lights">
+		<div class="button-div">
+	  		<button class="light-buttons">
+	  			SPA
+	  		</button>
+		</div>
+		<h1> lights </h1>
+		<div class="button-div">
+	  		<button class="light-buttons">
+	  			MODE
+	  		</button>
+		</div>
 	</section>
 </body>
 </html>

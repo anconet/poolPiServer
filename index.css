@@ -67,6 +67,10 @@ nav ul li a {
 	color: #E7D9B8;
 }
 
+a:hover {
+	color: #78acca;
+}
+
 .intro {
 	height: 500px;
 	background-color: #78acca;
@@ -74,7 +78,7 @@ nav ul li a {
 }
 
 .intro-content {
-	padding: 200px 200px 100px;
+	padding: 200px 25% 100px;
 	text-transform: uppercase;
 	font-size: 3em;
 	color: #295577;
@@ -108,14 +112,25 @@ h1 {
 }
 
 button {	
-	border: none;
 	height: 180px;
 	width: 180px;
 	border-radius: 50%;
 	font-family: "League Gothic", "Regina Black";
 	font-size: 5em;
+	transition-duration: .5s;
+}
+
+.mode-buttons {	
+	border: solid;
+	border-width: 7px;
+	border-color: #295577;
+	background-color: #e7d9b8;
+	color: #295577;
+}
+
+.mode-buttons:hover {
+	background-color: #295577;
 	color: #e7d9b8;
-	
 }
 
 .mode h1 {
@@ -134,6 +149,50 @@ button {
 
 .buttonOn {
 	background-color: #295577;
+	color: #e7d9b8;
 }
 
+.temp-control {
+	height: 200px;
+	background-color: #e7d9b8;
+	text-align: center;
+	display: flex;
+	align-items: center;
+}
 
+.temp-control p {
+	text-transform: uppercase;
+	font-size: 3em;
+	color: #295577;
+	letter-spacing: .5em;
+	line-height: 1.5;
+	text-align: center;
+	width: 100%;
+}
+
+.lights {
+	display: flex;
+	align-items: center;
+	height: 300px;
+	background-color: #295577;
+	align-content: center;
+}
+
+.lights h1 {
+	color: #e7d9b8;
+	width: 30%;
+	display: inline-block;
+}
+
+.light-buttons {
+	border: solid;
+	border-width: 7px;
+	border-color: #78acca;
+	background-color: #295577;
+	color: #78acca;
+}
+
+.light-buttons:hover {
+	background-color: #78acca;
+	color: #295577;
+}
