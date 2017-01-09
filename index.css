@@ -3,7 +3,12 @@
 
 @font-face {
 	font-family: "Regina Black";
-	src: url("../../../../Creative Cloud Files/ReginaBlack-Solid.ttf") format("truetype");
+	src: url("fonts/ReginaBlack-Solid.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "League Gothic";
+	src: url("fonts/LeagueGothic-Regular.otf") format("opentype");
 }
 
 html,
@@ -44,7 +49,7 @@ nav {
 	display: inline-block;
 	padding: 0em 1em 0em 0em;
 	width: 75%;
-	
+
 }
 
 nav ul {
@@ -74,7 +79,7 @@ a:hover {
 .intro {
 	height: 500px;
 	background-color: #78acca;
-	text-align: center;	
+	text-align: center;
 }
 
 .intro-content {
@@ -84,7 +89,7 @@ a:hover {
 	color: #295577;
 	letter-spacing: .5em;
 	line-height: 1.5;
-	
+
 }
 
 h1 {
@@ -111,7 +116,7 @@ h1 {
 	height: 60%;
 }
 
-button {	
+button {
 	height: 180px;
 	width: 180px;
 	border-radius: 50%;
@@ -120,7 +125,7 @@ button {
 	transition-duration: .5s;
 }
 
-.mode-buttons {	
+.mode-buttons {
 	border: solid;
 	border-width: 7px;
 	border-color: #295577;
@@ -210,4 +215,3 @@ button {
 	text-align: center;
 	font-size: 3em;
 }
-

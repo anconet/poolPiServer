@@ -4,6 +4,10 @@
 <meta charset="utf-8">
 <title>PoolPiGrace</title>
 <link href="index.css" rel="stylesheet" type="text/css">
+
+<!-- JQuery Library from Google -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
 </head>
 
 <body>
@@ -19,31 +23,31 @@
 			</ul>
 		</nav>
 	</header>
-	
+
 	<section class="intro">
 		<p class="intro-content">You're only one
 		swim away from a
 		good mood</p>
 	</section>
-	
+
 	<section class="mode" id="mode-anchor">
-		<div class="button-div">
+		<div class="button-div" id="spaModeButton">
 	  		<button class="mode-buttons">
 	  			SPA
 	  		</button>
 		</div>
 		<h1> mode </h1>
-		<div class="button-div">
+		<div class="button-div" id="poolModeButton">
 	  		<button class="mode-buttons">
 	  			POOL
 	  		</button>
 		</div>
 	</section>
-	
+
 	<section class="temp-control">
 		<p>IN PROGRESS...</p>
 	</section>
-	
+
 	<section class="lights">
 		<div class="button-div">
 	  		<button class="light-buttons">
@@ -57,11 +61,29 @@
 	  		</button>
 		</div>
 	</section>
-	
+
 	<section class="credits">
 		 <p>
 		 	by Team Anconetani
 		 </p>
 	</section>
 </body>
+
+<script>
+	$("#poolModeButton").click(function(){
+		var objEvent = {};
+		objEvent.type = "buttonPress";
+		objEvent.subject = "poolModeButton";
+		var objElementID = this;
+		$.post( "php/buttonPress.php", objEvent, function(data){processResponse(data,objElementID)}, "json");
+	});
+
+	function processResponse(objEventResponse,objElementID) {
+		console.log (objEventResponse);
+		if (objEventResponse.response == "off") { $(objElementID).removeClass("buttonOn").addClass("buttonOff");}
+		else if (objEventResponse.response == "on") { $(objElementID).removeClass("buttonOff").addClass("buttonOn");}
+		else { alert("Error: Server Response: " + objEventResponse.response)}
+	}
+</script>
+
 </html>
