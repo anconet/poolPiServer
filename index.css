@@ -1,14 +1,14 @@
 @charset "utf-8";
 /* CSS Document */
-
+ 
 @font-face {
 	font-family: "Regina Black";
-	src: url("Regina_Black/ReginaBlack-Solid.ttf") format("truetype");
+	src: url("fonts/ReginaBlack-Solid.ttf") format("truetype");
 }
 
 @font-face {
 	font-family: "League Gothic";
-	src: url("Regina_Black/LeagueGothic-Regular.otf") format("opentype");
+	src: url("fonts/LeagueGothic-Regular.otf") format("opentype");
 }
 
 html,
