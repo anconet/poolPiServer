@@ -1,5 +1,18 @@
 <?php
 // Event Response class
+/**
+ *
+ */
+class MessageType
+{
+  public 
+  function __construct(argument)
+  {
+    # code...
+  }
+}
+
+
 class EventResponse
 {
     public $type;
@@ -17,7 +30,7 @@ class EventResponse
 
         case "initializeRequest":
           $this->type = $event->type;
-          $this->type = $response;
+          $this->response = $response;
           break;
 
         case "buttonPress":

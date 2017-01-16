@@ -57,7 +57,7 @@
 		<h1> lights </h1>
 		<div class="button-div">
 	  		<button class="light-buttons">
-	  			MODE
+	  			POOL
 	  		</button>
 		</div>
 	</section>
@@ -70,6 +70,14 @@
 </body>
 
 <script>
+$(document).ready(function(){
+	var objEvent = {};
+	objEvent.type = "initializeRequest";
+	$.post("php/initializationRequest.php", objEvent,function(data){
+		console.log (data);
+	},"json");
+});
+
 	$("#poolModeButton").click(function(){
 		var objEvent = {};
 		objEvent.type = "buttonPress";
