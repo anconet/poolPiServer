@@ -18,14 +18,16 @@ html * {
 	padding: 0;
 }
 
-body{
+body {
 	font-family: "League Gothic";
 }
 
 header {
 	position: fixed;
-	padding: 2em;
+	display: flex;
+	align-items: center;
 	background: #295577;
+	padding: 0 3% 0 4%;
 	width:100%;
 	top: inherit;
 	z-index: 1000;
@@ -33,11 +35,12 @@ header {
 }
 
 h2 {
-	width: 20%;
+	width: 25%;
 	font-family: "Regina Black";
 	color: #E7D9B8;
-	font-size: 2em;
-	display: inline;
+	height: 100%;
+	font-size: 3vw;
+	line-height: 100px;
 }
 
 nav {
@@ -47,8 +50,9 @@ nav {
 	top: 0;
 	left: 0;
 	display: inline-block;
-	padding: 0em 1em 0em 0em;
+	padding: 0em 0em 0em 0em;
 	width: 75%;
+	font-size: 2vw;
 
 }
 
@@ -83,9 +87,11 @@ a:hover {
 }
 
 .intro-content {
-	padding: 150px 25% 100px;
+	padding-top: 150px;
+	padding-left: 15%;
+	padding-right: 15%;
 	text-transform: uppercase;
-	font-size: 3em;
+	font-size: 5vw;
 	color: #295577;
 	letter-spacing: .5em;
 	line-height: 1.5;
@@ -138,10 +144,15 @@ button {
 	color: #e7d9b8;
 }
 
+.titles {
+	text-align: center;
+	width: 30%;
+}
+
 .mode h1 {
 	color: #78ACCA;
-	width: 30%;
-	display: inline-block;
+	font-size: 10vw;
+	display: block;
 }
 
 .buttonOff {
@@ -185,8 +196,8 @@ button {
 
 .lights h1 {
 	color: #e7d9b8;
-	width: 30%;
-	display: inline-block;
+	font-size: 9vw;
+	display: block;
 }
 
 .light-buttons {
@@ -214,4 +225,36 @@ button {
 	width: 100%;
 	text-align: center;
 	font-size: 3em;
+}
+
+.info {
+	height: 300px;
+	background-color: #78acca;
+	display: flex;
+	align-items: center;
+	align-content: center;
+}
+
+.info-div {
+	width: 35%;
+	display: inline-block flex;
+	justify-content: center;
+	text-align: center;
+	
+}
+
+.info-div p {
+	height: 180px;
+	width: 180px;
+	display: inline-block;
+	background-color: #e7d9b8;
+	border-radius: 50%;
+	line-height: 180px;
+	font-size: 7em;
+	color: #78acca;
+}
+
+.info h1 {
+	color: #295577;
+	font-size: 9vw;
 }
