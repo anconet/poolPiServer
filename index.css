@@ -75,7 +75,6 @@ nav ul li a {
 	text-transform: uppercase;
 	color: #E7D9B8;
 }
-
 a:hover {
 	color: #78acca;
 }
@@ -139,10 +138,10 @@ button {
 	color: #295577;
 }
 
-.mode-buttons:hover {
+/*.mode-buttons:hover {
 	background-color: #295577;
 	color: #e7d9b8;
-}
+}*/
 
 .titles {
 	text-align: center;
@@ -208,10 +207,10 @@ button {
 	color: #78acca;
 }
 
-.light-buttons:hover {
+/*.light-buttons:hover {
 	background-color: #78acca;
 	color: #295577;
-}
+}*/
 
 .credits {
 	height: 100px;
