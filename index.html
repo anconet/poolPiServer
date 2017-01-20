@@ -39,7 +39,7 @@
 		</div>
 		<div class="titles">
 			<h1> mode </h1>
-		</div>	
+		</div>
 		<div class="button-div">
 	  		<button class="mode-buttons" id="poolModeButton">
 	  			POOL
@@ -54,7 +54,7 @@
 	<a name="lights-anchor"></a>
 	<section class="lights">
 		<div class="button-div">
-	  		<button class="light-buttons">
+	  		<button class="light-buttons" id="spaLightButton">
 	  			SPA
 	  		</button>
 		</div>
@@ -62,12 +62,12 @@
 			<h1> lights </h1>
 		</div>
 		<div class="button-div">
-	  		<button class="light-buttons">
+	  		<button class="light-buttons" id="poolLightButton">
 	  			POOL
 	  		</button>
 		</div>
 	</section>
-	
+
 	<a name="info-anchor"></a>
 	<section class="info">
 		<div class="info-div" id="spa">
@@ -93,14 +93,43 @@
 </body>
 
 <script>
+
+// **************************************************************************
+// Scripts for interacting with the server !-->
+// **************************************************************************
+
+
+// Page Initialization
+// **************************************************************************
 $(document).ready(function(){
 	var objEvent = {};
 	objEvent.type = "initializeRequest";
 	$.post("php/initializationRequest.php", objEvent,function(data){
 		console.log (data);
+		console.log (data.response);
+		console.log (data.response.poolMode);
+
+		if (data.response.poolMode == "off") {$("#poolModeButton").removeClass("buttonOn").addClass("buttonOff");}
+		else if (data.response.poolMode == "on") { $("#poolModeButton").removeClass("buttonOff").addClass("buttonOn");}
+		else { alert("Error: Server Response: " + data.response)}
+
+		if (data.response.spaMode =="off") {$("#spaModeButton").removeClass("buttonOn").addClass("buttonOff");}
+		else if (data.response.spaMode == "on") { $("#spaModeButton").removeClass("buttonOff").addClass("buttonOn");}
+		else { alert("Error: Server Response: " + data.response)}
+
+		if (data.response.poolLight =="off") {$("#poolLightButton").removeClass("buttonOn").addClass("buttonOff");}
+		else if (data.response.poolLight == "on") { $("#poolLightButton").removeClass("buttonOff").addClass("buttonOn");}
+		else { alert("Error: Server Response: " + data.response)}
+
+		if (data.response.spaLight =="off") {$("#spaLightButton").removeClass("buttonOn").addClass("buttonOff");}
+		else if (data.response.spaLight == "on") { $("#spaLightButton").removeClass("buttonOff").addClass("buttonOn");}
+		else { alert("Error: Server Response: " + data.response)}
+
 	},"json");
 });
 
+// Pool Mode Button
+// **************************************************************************
 	$("#poolModeButton").click(function(){
 		var objEvent = {};
 		objEvent.type = "buttonPress";
@@ -108,6 +137,9 @@ $(document).ready(function(){
 		var objElementID = this;
 		$.post( "php/buttonPress.php", objEvent, function(data){processResponse(data,objElementID)}, "json");
 	});
+
+	// Button Response Processing
+	// **************************************************************************
 
 	function processResponse(objEventResponse,objElementID) {
 		console.log (objEventResponse);
