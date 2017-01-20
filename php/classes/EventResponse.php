@@ -1,23 +1,7 @@
 <?php
-// Event Response class
-/**
- *
- */
-class MessageType
-{
-  public 
-  function __construct(argument)
-  {
-    # code...
-  }
-}
-
 
 class EventResponse
 {
-    public $type;
-    public $subject;
-    public $response;
 
     public function __construct($event, $response)
     {
