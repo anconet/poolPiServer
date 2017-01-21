@@ -125,6 +125,9 @@ $(document).ready(function(){
 		else if (data.response.spaLight == "on") { $("#spaLightButton").removeClass("lightButtonOff").addClass("lightButtonOn");}
 		else { alert("Error: Server Response: " + data.response)}
 
+		$("#air").children("p").text(data.response.airTemp);
+		$("#spa").children("p").text(data.response.waterTemp);
+
 	},"json");
 });
 
