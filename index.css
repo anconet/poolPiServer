@@ -203,10 +203,17 @@ button {
 	color: #78acca;
 }
 
-/*.light-buttons:hover {
+
+
+.lightButtonOn {
 	background-color: #78acca;
 	color: #295577;
-}*/
+}
+
+.lightButtonOff {
+	background-color: #295577;
+	color: #78acca;
+}
 
 .credits {
 	height: 100px;
