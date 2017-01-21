@@ -117,12 +117,12 @@ $(document).ready(function(){
 		else if (data.response.spaMode == "on") { $("#spaModeButton").removeClass("buttonOff").addClass("buttonOn");}
 		else { alert("Error: Server Response: " + data.response)}
 
-		if (data.response.poolLight =="off") {$("#poolLightButton").removeClass("buttonOn").addClass("buttonOff");}
-		else if (data.response.poolLight == "on") { $("#poolLightButton").removeClass("buttonOff").addClass("buttonOn");}
+		if (data.response.poolLight =="off") {$("#poolLightButton").removeClass("lightButtonOn").addClass("lightButtonOff");}
+		else if (data.response.poolLight == "on") { $("#poolLightButton").removeClass("lightButtonOff").addClass("lightButtonOn");}
 		else { alert("Error: Server Response: " + data.response)}
 
-		if (data.response.spaLight =="off") {$("#spaLightButton").removeClass("buttonOn").addClass("buttonOff");}
-		else if (data.response.spaLight == "on") { $("#spaLightButton").removeClass("buttonOff").addClass("buttonOn");}
+		if (data.response.spaLight =="off") {$("#spaLightButton").removeClass("lightButtonOn").addClass("lightButtonOff");}
+		else if (data.response.spaLight == "on") { $("#spaLightButton").removeClass("lightButtonOff").addClass("lightButtonOn");}
 		else { alert("Error: Server Response: " + data.response)}
 
 	},"json");
