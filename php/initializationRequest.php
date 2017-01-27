@@ -3,8 +3,8 @@
 include 'classes/Event.php';
 include 'classes/EventResponse.php';
 
-//objEvent = new Event($_POST);
-$objEvent = new Event(array("type"=>"initializeRequest"));
+$objEvent = new Event($_POST);
+//$objEvent = new Event(array("type"=>"initializeRequest"));
 
 if ($objEvent->type == "invalid") {
   echo json_encode(new EventResponse($objEvent,"invalid"));

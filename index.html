@@ -95,7 +95,7 @@
 <script>
 
 // **************************************************************************
-// Scripts for interacting with the server !-->
+// Scripts for interacting with the server
 // **************************************************************************
 
 
@@ -107,7 +107,6 @@ $(document).ready(function(){
 	$.post("php/initializationRequest.php", objEvent,function(data){
 		console.log (data);
 		console.log (data.response);
-		console.log (data.response.poolMode);
 
 		if (data.response.poolMode == "off") {$("#poolModeButton").removeClass("buttonOn").addClass("buttonOff");}
 		else if (data.response.poolMode == "on") { $("#poolModeButton").removeClass("buttonOff").addClass("buttonOn");}
