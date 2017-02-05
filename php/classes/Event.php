@@ -1,23 +1,27 @@
 <?php
 // Event class
-class Event
-{
-    public $type;
-    public $subject;
+class Event {
 
-    public function __construct($post)
-    {
-        if ($post["type"] == "initializeRequest") {
-            $this->type = "initializeRequest";
-        } elseif ($post["type"]=="buttonPress") {
-            $this->type = "buttonPress";
-            if ($post["subject"] =="poolModeButton") {
-                $this->subject = "poolModeButton";
-            } else {
-                $this->subject = "invalid";
-            }
-        } else {
-            $this->type = "invalid";
-        }
-    }
+	public function __construct($post)
+	{
+		switch ($post["type"]){
+
+		case "initializeRequest":
+			$this->type = "initializeRequest";
+			break;
+		case "buttonPress":
+			$this->type = "buttonPress";
+
+			switch ($post["subject"]) {
+			case "poolModeButton":
+				$this->subject = "poolModeButton";
+				break;
+			default:
+				$this->subject = "invalid";
+			}	break;
+		default:
+			$this->type = "invalid";
+			break;
+		}
+	}
 }
