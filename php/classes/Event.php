@@ -4,24 +4,34 @@ class Event {
 
 	public function __construct($post)
 	{
-		switch ($post["type"]){
+		if (array_key_exists("type",$post)) {
+			switch ($post["type"]){
 
-		case "initializeRequest":
-			$this->type = "initializeRequest";
-			break;
-		case "buttonPress":
-			$this->type = "buttonPress";
+			case "initializeRequest":
+				$this->type = "initializeRequest";
+				break;
+			case "buttonPress":
+				$this->type = "buttonPress";
 
-			switch ($post["subject"]) {
-			case "poolModeButton":
-				$this->subject = "poolModeButton";
+				if (array_key_exists("subject",$post)) {
+					switch ($post["subject"]) {
+					case "poolModeButton":
+						$this->subject = "poolModeButton";
+						break;
+					default:
+						$this->subject = "invalid";
+						break;
+					}
+				} else {
+					$this->subject = "invalid";
+				}
 				break;
 			default:
-				$this->subject = "invalid";
-			}	break;
-		default:
+				$this->type = "invalid";
+				break;
+			}
+		} else {
 			$this->type = "invalid";
-			break;
 		}
 	}
 }
