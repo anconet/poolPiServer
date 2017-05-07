@@ -104,7 +104,8 @@
 $(document).ready(function(){
 	var objEvent = {};
 	objEvent.type = "initializeRequest";
-	$.post("php/initializationRequest.php", objEvent,function(data){
+	$.ajaxSetup({contentType:"application/json"});
+	$.post("php/initializationRequest.php", JSON.stringify(objEvent),function(data){
 		console.log (data);
 		console.log (data.response);
 
