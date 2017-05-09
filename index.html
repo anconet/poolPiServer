@@ -138,7 +138,8 @@ $(document).ready(function(){
 		objEvent.type = "buttonPress";
 		objEvent.subject = "poolModeButton";
 		var objElementID = this;
-		$.post( "php/buttonPress.php", objEvent, function(data){processResponse(data,objElementID)}, "json");
+		$.ajaxSetup({contentType:"application/json"});
+		$.post( "php/buttonPress.php", JSON.stringify(objEvent), function(data){processResponse(data,objElementID)}, "json");
 	});
 
 	// Button Response Processing
